@@ -63,7 +63,8 @@
  *
  *
  */
-struct Solution;
+use crate::Solution;
+#[allow(dead_code)]
 // @lc code=start
 impl Solution {
     pub fn max_profit(prices: Vec<i32>) -> i32 {
@@ -79,6 +80,8 @@ impl Solution {
     }
 }
 // @lc code=end
+
+#[test]
 pub fn test() {
     let prices = Vec::from([7, 1, 5, 3, 6, 4]);
     let _profit = Solution::max_profit(prices);

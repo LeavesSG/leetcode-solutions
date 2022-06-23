@@ -79,7 +79,8 @@
 //     }
 // }
 
-use super::Solution;
+use crate::Solution;
+#[allow(dead_code)]
 
 // @lc code=start
 impl Solution {
@@ -115,6 +116,7 @@ impl Solution {
 }
 // @lc code=end
 
+#[test]
 pub fn test() {
     let grid = Vec::from([
         Vec::from([1, 1, 1]),

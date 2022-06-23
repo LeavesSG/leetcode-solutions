@@ -3,8 +3,8 @@
  *
  * [135] Candy
  */
-
-use super::Solution;
+use crate::Solution;
+#[allow(dead_code)]
 
 // @lc code=start
 impl Solution {
@@ -42,6 +42,7 @@ impl Solution {
 }
 // @lc code=end
 
+#[test]
 pub fn test() {
     let ratings = Vec::from([1, 3, 2, 2, 1]);
     assert!(Solution::candy(ratings) == 7);

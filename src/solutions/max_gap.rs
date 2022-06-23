@@ -1,4 +1,5 @@
-use super::Solution;
+use crate::Solution;
+#[allow(dead_code)]
 
 impl Solution {
     pub fn maximum_gap(nums: Vec<i32>) -> i32 {
