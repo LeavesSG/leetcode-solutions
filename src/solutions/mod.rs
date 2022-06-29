@@ -11,3 +11,4 @@ mod set_zeroes;
 
 mod q1812_determine_color_of_a_chessboard_square;
 mod q877_stone_game;
+mod q915_partition_array_into_disjoint_intervals;

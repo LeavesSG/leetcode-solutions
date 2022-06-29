@@ -41,7 +41,11 @@
  */
 
 // @lc code=start
-const BS1 = (length: number, compare: (index: number) => number, strict = true): number => {
+const BS1 = (
+  length: number,
+  compare: (index: number) => number,
+  strict = true
+): number => {
   let lower_bound = 0;
   let upper_bound = length - 1;
   if (strict) {
@@ -69,10 +73,13 @@ const BS1 = (length: number, compare: (index: number) => number, strict = true):
 };
 function threeSum(nums: number[]): number[][] {
   nums = nums.sort((a, b) => b - a);
-  const result = [];
+  const result: number[][] = [];
   for (let i = 0; i < nums.length - 3; i++) {
     for (let j = i + 1; j < nums.length - 2; j++) {
-      const found = BS1(nums.length - 1, (index) => nums[i] + nums[j] + nums[index]);
+      const found = BS1(
+        nums.length - 1,
+        (index) => nums[i] + nums[j] + nums[index]
+      );
       if (found && found !== i && found !== j) result.push([i, j, found]);
     }
   }

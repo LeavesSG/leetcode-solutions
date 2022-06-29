@@ -53,28 +53,27 @@
  *
  */
 
-import { ListNode } from "./utils";
-
+class ListNode {
+  val: number;
+  next: ListNode | null;
+  constructor(val?: number, next?: ListNode | null) {
+    this.val = val === undefined ? 0 : val;
+    this.next = next === undefined ? null : next;
+  }
+}
 // @lc code=start
-/**
- * Definition for singly-linked list.
- * class ListNode {
- *     val: number
- *     next: ListNode | null
- *     constructor(val?: number, next?: ListNode | null) {
- *         this.val = (val===undefined ? 0 : val)
- *         this.next = (next===undefined ? null : next)
- *     }
- * }
- */
-function mergeTwoLists(list1: ListNode | null, list2: ListNode | null): ListNode | null {
+
+function mergeTwoLists(
+  list1: ListNode | null,
+  list2: ListNode | null
+): ListNode | null {
   const __less = (i: ListNode | null, j: ListNode | null) => {
     if (!i && !j) return null;
     else if (!i) return j;
     else if (!j) return i;
     else return i.val <= j.val ? i : j;
   };
-  let root = null;
+  let root: ListNode | null = null;
   let pointer: ListNode | null = null;
   while (list1 || list2) {
     const less = __less(list1, list2);
