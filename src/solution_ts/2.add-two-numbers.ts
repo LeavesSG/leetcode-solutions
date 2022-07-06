@@ -26,7 +26,10 @@ class ListNode {
  * }
  */
 
-function addTwoNumbers(l1: ListNode | null, l2: ListNode | null): ListNode | null {
+function addTwoNumbers(
+  l1: ListNode | null,
+  l2: ListNode | null
+): ListNode | null {
   let root: ListNode | null = null;
   let pointer: ListNode | null = root;
   let carry = 0;
