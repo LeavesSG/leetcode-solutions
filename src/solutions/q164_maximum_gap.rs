@@ -1,5 +1,11 @@
+/*
+ * @lc app=leetcode id=164 lang=rust
+ *
+ * [164] Maximum Gap
+ */
 use crate::Solution;
 #[allow(dead_code)]
+// @lc code=start
 
 impl Solution {
     pub fn maximum_gap(nums: Vec<i32>) -> i32 {
@@ -29,3 +35,5 @@ impl Solution {
         return nums[min] - nums[max];
     }
 }
+
+// @lc code=end

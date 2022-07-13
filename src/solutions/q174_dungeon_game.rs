@@ -4,9 +4,9 @@
  * [174] Dungeon Game
  */
 use super::Solution;
-
 // @lc code=start
 use std::collections::HashMap;
+#[allow(dead_code)]
 impl Solution {
     pub fn calculate_minimum_hp(dungeon: Vec<Vec<i32>>) -> i32 {
         let m = dungeon.len();
