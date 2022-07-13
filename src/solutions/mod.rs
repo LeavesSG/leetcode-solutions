@@ -9,6 +9,7 @@ mod max_profit;
 mod min_path_sum;
 mod set_zeroes;
 
+mod q174_dungeon_game;
 mod q1812_determine_color_of_a_chessboard_square;
 mod q2024_maximize_the_confusion_of_an_exam;
 mod q62_unique_paths;
