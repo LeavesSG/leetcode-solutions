@@ -4,6 +4,7 @@ leetcode solutions in typescript and rust
 
 | question id | question name                                  | lang       | time    | memory  | date      | remark                 |
 | ----------- | ---------------------------------------------- | ---------- | ------- | ------- | --------- | ---------------------- |
+| 48          | Rotate Image                                   | rust       | 45.37%  | 18.52%  | 2022.7.14 | array                  |
 | 120         | Triangle                                       | rust       | 36.11%  | 99.31%  | 2022.7.14 | dp                     |
 | 174 ✕       | Dungeon Game                                   | rust       | NaN     | NaN     | 2022.7.13 | 耻辱柱,写了一天都没 ac |
 | 62          | Unique Paths                                   | rust       | 100%    | 26.92%  | 2022.7.8  | dp, hashmap            |
