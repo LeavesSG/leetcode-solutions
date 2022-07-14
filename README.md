@@ -4,8 +4,9 @@ leetcode solutions in typescript and rust
 
 | question id | question name                                  | lang       | time    | memory  | date      | remark                 |
 | ----------- | ---------------------------------------------- | ---------- | ------- | ------- | --------- | ---------------------- |
+| 120         | Triangle                                       | rust       | 36.11%  | 99.31%  | 2022.7.14 |
 | 174 ✕       | Dungeon Game                                   | rust       | NaN     | NaN     | 2022.7.13 | 耻辱柱,写了一天都没 ac |
-| 62          | Unique Paths                                   | rust       | 100%    | 26.92%  | 2022.7.8  |                        |
+| 62          | Unique Paths                                   | rust       | 100%    | 26.92%  | 2022.7.8  |
 | 2024 ✕      | Maximize the Con&&&fusion of an Exam           | rust       | NaN     | NaN     | 2022.7.1  | 耻辱柱,写了一天都没 ac |
 | 915         | Partition Array into Disjoint Intervals        | rust       | 50%     | 50%     | 2022.6.29 |
 | 877         | Stone Game                                     | rust       | 10%     | 10%     | 2022.6.29 |
