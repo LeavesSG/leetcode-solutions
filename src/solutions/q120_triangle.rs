@@ -16,17 +16,12 @@ impl Solution {
 
         while depth <= max_depth && index <= triangle[max_depth].len() {
             let curr = triangle[depth][index];
-            let min: i32;
-            match (depth, index) {
-                (0, 0) => min = curr,
-                (depth, 0) => {
-                    min = dp[depth - 1][0] + curr;
-                }
-                (depth, index) if (index == max_index(depth)) => {
-                    min = dp[depth - 1][index - 1] + curr;
-                }
-                _ => min = dp[depth - 1][index - 1].min(dp[depth - 1][index]) + curr,
-            }
+            let min: i32 = match (depth, index) {
+                (0, 0) => curr,
+                (depth, 0) => dp[depth - 1][0] + curr,
+                (depth, index) if (index == max_index(depth)) => dp[depth - 1][index - 1] + curr,
+                _ => dp[depth - 1][index - 1].min(dp[depth - 1][index]) + curr,
+            };
             dp[depth][index] = min;
             if index == max_index(depth) {
                 depth += 1;

@@ -16,7 +16,7 @@ impl Solution {
             if i1 > i2 {
                 return i1;
             }
-            return i2;
+            i2
         }
         if m == 0 {
             return 0;
@@ -29,7 +29,7 @@ impl Solution {
         for i in 2..m {
             dp.push(larger(dp[i - 1], dp[i - 2] + nums[i]))
         }
-        return dp[m - 1];
+        dp[m - 1]
     }
 }
 

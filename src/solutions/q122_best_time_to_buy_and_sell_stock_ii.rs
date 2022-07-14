@@ -76,7 +76,7 @@ impl Solution {
                 profit += diff;
             }
         }
-        return profit;
+        profit
     }
 }
 // @lc code=end

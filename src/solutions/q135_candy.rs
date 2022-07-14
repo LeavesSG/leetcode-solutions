@@ -16,7 +16,7 @@ impl Solution {
             if i > j {
                 return i;
             };
-            return j;
+            j
         }
 
         for i in 1..m {
@@ -37,7 +37,7 @@ impl Solution {
         for i in greedy {
             count += i;
         }
-        return count;
+        count
     }
 }
 // @lc code=end

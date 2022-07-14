@@ -32,25 +32,25 @@ impl Solution {
                         min = before;
                     }
                     (i, 0) => {
-                        min = recursion(i - 1, j, m, n, before, &dungeon, map);
+                        min = recursion(i - 1, j, m, n, before, dungeon, map);
                     }
                     (0, j) => {
-                        min = recursion(i, j - 1, m, n, before, &dungeon, map);
+                        min = recursion(i, j - 1, m, n, before, dungeon, map);
                     }
                     _ => {
-                        let left = recursion(i - 1, j, m, n, before, &dungeon, map);
-                        let right = recursion(i, j - 1, m, n, before, &dungeon, map);
+                        let left = recursion(i - 1, j, m, n, before, dungeon, map);
+                        let right = recursion(i, j - 1, m, n, before, dungeon, map);
                         min = left.min(right);
                     }
                 },
             }
             map.insert((m - 1, n - 1), min);
-            return min;
+            min
         }
         let mut map: HashMap<(usize, usize), i32> = HashMap::new();
         let result = recursion(0, 0, m - 1, n - 1, 1, &dungeon, &mut map);
         println!("{:?}", map);
-        return result;
+        result
     }
 }
 // @lc code=end

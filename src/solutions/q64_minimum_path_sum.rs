@@ -91,7 +91,7 @@ impl Solution {
             if i < j {
                 return i;
             }
-            return j;
+            j
         }
         let mut dp = grid.clone();
         for i in 0..m {
@@ -102,16 +102,14 @@ impl Solution {
                     } else {
                         dp[i][j] = grid[i][j] + dp[i][j - 1]
                     }
+                } else if j == 0 {
+                    dp[i][j] = grid[i][j] + dp[i - 1][j]
                 } else {
-                    if j == 0 {
-                        dp[i][j] = grid[i][j] + dp[i - 1][j]
-                    } else {
-                        dp[i][j] = grid[i][j] + min(dp[i - 1][j], dp[i][j - 1])
-                    }
+                    dp[i][j] = grid[i][j] + min(dp[i - 1][j], dp[i][j - 1])
                 }
             }
         }
-        return dp[m - 1][n - 1];
+        dp[m - 1][n - 1]
     }
 }
 // @lc code=end

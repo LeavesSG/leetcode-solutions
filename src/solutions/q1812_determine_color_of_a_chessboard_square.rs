@@ -11,7 +11,7 @@ impl Solution {
     pub fn square_is_white(coordinates: String) -> bool {
         let a = coordinates
             .chars()
-            .nth(0)
+            .next()
             .expect("123")
             .to_digit(20)
             .expect("");
@@ -21,7 +21,7 @@ impl Solution {
             .expect("456")
             .to_digit(10)
             .expect("");
-        return (a + b) % 2 == 0;
+        (a + b) % 2 == 0
     }
 }
 // @lc code=end
@@ -30,5 +30,5 @@ impl Solution {
 fn test() {
     let coordinates = String::from("h3");
     let test = Solution::square_is_white(coordinates);
-    assert_eq!(test, true);
+    assert!(test);
 }

@@ -23,9 +23,9 @@ impl Solution {
         ) -> i32 {
             let mut buffer = Vec::new();
             buffer.append(tracking);
-            while buffer.len() > 0 {
+            while !buffer.is_empty() {
                 let mut item = buffer.pop().expect("");
-                if &item.0 == &last_char {
+                if item.0 == last_char {
                     item.2 += &char_count;
                 } else {
                     item.1 -= &char_count;
@@ -38,12 +38,12 @@ impl Solution {
                 }
             }
             if last_call {
-                while tracking.len() > 0 {
+                while !tracking.is_empty() {
                     let item = tracking.pop().expect("msg");
                     max = max.max(item.2);
                 }
             }
-            return max;
+            max
         }
 
         for item in &chars {
@@ -73,7 +73,7 @@ impl Solution {
             }
         }
         max = check(&mut tracking, last_char, char_count, max, true);
-        return max;
+        max
     }
 }
 // @lc code=end

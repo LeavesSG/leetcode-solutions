@@ -15,3 +15,4 @@ mod q73_set_matrix_zeroes;
 mod q915_partition_array_into_disjoint_intervals;
 
 mod q120_triangle;
+mod q48_rotate_image;

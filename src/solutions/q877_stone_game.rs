@@ -23,33 +23,42 @@ impl Solution {
         ) -> i32 {
             let key = len * start + end;
             let found = hashmap.get(&key);
-            if found.is_some() {
-                return *found.expect("");
-            }
-            let larger;
-            if end - start <= 2 {
-                if source[start] > source[start + 1] {
-                    larger = source[start];
-                } else {
-                    larger = source[start + 1];
+            match found {
+                Some(found) => *found,
+                _ => {
+                    let larger;
+                    if end - start <= 2 {
+                        if source[start] > source[start + 1] {
+                            larger = source[start];
+                        } else {
+                            larger = source[start + 1];
+                        }
+                    } else {
+                        let left = sum
+                            - max_piles(start + 1, end, source, hashmap, len, sum - source[start]);
+                        let right = sum
+                            - max_piles(
+                                start,
+                                end - 1,
+                                source,
+                                hashmap,
+                                len,
+                                sum - source[end - 1],
+                            );
+                        if left > right {
+                            larger = left;
+                        } else {
+                            larger = right
+                        }
+                    }
+                    hashmap.insert(key, larger);
+                    larger
                 }
-            } else {
-                let left =
-                    sum - max_piles(start + 1, end, source, hashmap, len, sum - source[start]);
-                let right =
-                    sum - max_piles(start, end - 1, source, hashmap, len, sum - source[end - 1]);
-                if left > right {
-                    larger = left;
-                } else {
-                    larger = right
-                }
             }
-            hashmap.insert(key, larger);
-            return larger;
         }
         let len = piles.len();
         let max = max_piles(0, len, &piles, &mut hashmap, len, sum);
-        return max * 2 > sum;
+        max * 2 > sum
     }
 }
 // @lc code=end

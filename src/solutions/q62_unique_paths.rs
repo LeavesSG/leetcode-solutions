@@ -10,23 +10,21 @@ impl Solution {
     fn recursion(m: i32, n: i32, hash_map: &mut std::collections::HashMap<(i32, i32), i32>) -> i32 {
         let find = hash_map.get(&(m, n));
         match find {
-            Some(v) => return *v,
+            Some(v) => *v,
             None => {
-                let result;
-                if m == 1 || n == 1 {
-                    result = 1;
+                let result = if m == 1 || n == 1 {
+                    1
                 } else {
-                    result =
-                        Self::recursion(m - 1, n, hash_map) + Self::recursion(m, n - 1, hash_map);
-                }
+                    Self::recursion(m - 1, n, hash_map) + Self::recursion(m, n - 1, hash_map)
+                };
                 hash_map.insert((m, n), result);
-                return result;
+                result
             }
         }
     }
     pub fn unique_paths(m: i32, n: i32) -> i32 {
         let mut map = std::collections::HashMap::new();
-        return Self::recursion(m, n, &mut map);
+        Self::recursion(m, n, &mut map)
     }
 }
 // @lc code=end

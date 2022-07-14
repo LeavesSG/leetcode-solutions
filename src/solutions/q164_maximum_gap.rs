@@ -32,7 +32,7 @@ impl Solution {
                 ub = i;
             }
         }
-        return nums[min] - nums[max];
+        nums[min] - nums[max]
     }
 }
 

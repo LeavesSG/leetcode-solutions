@@ -32,7 +32,7 @@ impl Solution {
             part += 1
         }
 
-        return part + 1;
+        part + 1
     }
 }
 // @lc code=end
