@@ -17,7 +17,8 @@ impl Solution {
         let mut ub = 1;
         let mut min = 0;
         let mut max = 1;
-        for i in 2..max {
+        let mut i = 2;
+        while i < max {
             if nums[i] < nums[lb] {
                 if nums[lb] - nums[i] > nums[max] - nums[min] {
                     min = i;
@@ -31,7 +32,9 @@ impl Solution {
                 }
                 ub = i;
             }
+            i -= 1;
         }
+
         nums[min] - nums[max]
     }
 }
