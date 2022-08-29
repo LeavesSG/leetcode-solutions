@@ -8,6 +8,7 @@ mod q174_dungeon_game;
 mod q1812_determine_color_of_a_chessboard_square;
 mod q198_house_robber;
 mod q2024_maximize_the_confusion_of_an_exam;
+mod q204_count_primes;
 mod q48_rotate_image;
 mod q554_brick_wall;
 mod q62_unique_paths;
