@@ -4,6 +4,7 @@ leetcode solutions in typescript and rust
 
 | question id | question name                                  | lang       | time    | memory  | date      | remark                 |
 | ----------- | ---------------------------------------------- | ---------- | ------- | ------- | --------- | ---------------------- |
+| 319         | Bulb Switcher                                  | rust       | NaN     | NaN     | 2022.9.1  | 做不出来，超时了       |
 | 204         | Count Primes                                   | rust       | 12%     | 25%     | 2022.8.29 |                        |
 | 554         | Brick Wall                                     | rust       | 20%     | 80%     | 2022.8.25 | hash table             |
 | 48          | Rotate Image                                   | rust       | 45.37%  | 18.52%  | 2022.7.14 | array                  |
