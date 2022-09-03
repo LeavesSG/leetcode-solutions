@@ -11,6 +11,7 @@ mod q2024_maximize_the_confusion_of_an_exam;
 mod q204_count_primes;
 mod q319_bulb_switcher;
 mod q48_rotate_image;
+mod q542_01_matrix;
 mod q554_brick_wall;
 mod q62_unique_paths;
 mod q64_minimum_path_sum;
