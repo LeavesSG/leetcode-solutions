@@ -9,6 +9,7 @@ mod q1812_determine_color_of_a_chessboard_square;
 mod q198_house_robber;
 mod q2024_maximize_the_confusion_of_an_exam;
 mod q204_count_primes;
+mod q223_rectangle_area;
 mod q319_bulb_switcher;
 mod q48_rotate_image;
 mod q542_01_matrix;

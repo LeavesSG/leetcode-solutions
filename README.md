@@ -4,6 +4,7 @@ leetcode solutions in typescript and rust
 
 | question id | question name                                  | lang       | time    | memory  | date      | remark                 |
 | ----------- | ---------------------------------------------- | ---------- | ------- | ------- | --------- | ---------------------- |
+| 223         | Rectangle Area                                 | rust       | 100%    | 100%    | 2022.9.5  |                        |
 | 542         | 01 Matrix                                      | rust       | 7%      | 10%     | 2022.9.3  | BFS, hash table        |
 | 319         | Bulb Switcher                                  | rust       | NaN     | NaN     | 2022.9.1  | 做不出来，超时了       |
 | 204         | Count Primes                                   | rust       | 12%     | 25%     | 2022.8.29 |                        |
