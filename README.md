@@ -48,3 +48,11 @@ leetcode solutions in typescript and rust
 | 3           | Longest Substring Without Repeating Characters | typescript | unknown | unknown | unknown   |
 | 2           | Add Two Numbers                                | typescript | unknown | unknown | unknown   |
 | 1           | Two Sum                                        | javascript | unknown | unknown | unknown   |
+
+# generate code snippets
+
+- code pieces in rust go here: `src/algs/`
+- run script in root dir: `cargo run --bin batch_convert`
+- code snippets will be created here: `.vscode/[$file_name].code-snippets`
+
+edit `config/snippets-io.config` to modify the input/output directory.
