@@ -21,6 +21,6 @@ macro_rules! vecnd {
 #[macro_export]
 macro_rules! prettyprint {
     ($x:expr) => {
-        vec2d_pretty_print($x);
+        $crate::helpers::vec2d_pretty_print($x);
     };
 }

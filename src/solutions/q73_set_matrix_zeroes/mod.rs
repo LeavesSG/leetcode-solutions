@@ -60,22 +60,23 @@ use crate::Solution;
 
 // @lc code=start
 impl Solution {
-    #[allow(clippy::needless_range_loop)]
     pub fn set_zeroes(matrix: &mut Vec<Vec<i32>>) {
         let m = matrix.len();
+        if m == 0 {
+            return;
+        }
         let n = matrix[0].len();
-        let mut queue: Vec<[usize; 2]> = Vec::from([]);
-        for row in 0..m {
-            for col in 0..n {
-                let item = matrix[row][col];
-                if item == 0 {
-                    queue.push([row, col]);
+        let mut queue: Vec<(usize, usize)> = Vec::from([]);
+        for (ri, row) in matrix.iter().enumerate() {
+            for (ci, item) in row.iter().enumerate() {
+                if *item == 0 {
+                    queue.push((ri, ci));
                 }
             }
         }
-        for [row, col] in queue {
-            for i in 0..m {
-                matrix[i][col] = 0
+        for (row, col) in queue {
+            for row in matrix.iter_mut() {
+                row[col] = 0
             }
             for j in 0..n {
                 matrix[row][j] = 0
@@ -87,10 +88,10 @@ impl Solution {
 
 #[test]
 pub fn test() {
-    let mut grid = Vec::from([
-        Vec::from([1, 1, 1]),
-        Vec::from([1, 0, 1]),
-        Vec::from([1, 1, 3]),
-    ]);
-    print!("{:?}", Solution::set_zeroes(&mut grid));
+    use crate::{prettyprint, vecnd};
+    let mut grid = vecnd!([1, 1, 1], [1, 0, 1], [1, 1, 3]);
+    Solution::set_zeroes(&mut grid);
+    println!("The grid after 'Set Zero' is: ");
+    prettyprint!(&grid);
+    assert_eq!(grid, vecnd!([1, 0, 1], [0, 0, 0], [1, 0, 3]));
 }
