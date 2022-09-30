@@ -16,6 +16,7 @@ mod q419_battleships_in_a_board;
 mod q48_rotate_image;
 mod q542_01_matrix;
 mod q554_brick_wall;
+mod q593_valid_square;
 mod q62_unique_paths;
 mod q64_minimum_path_sum;
 mod q73_set_matrix_zeroes;
