@@ -4,6 +4,7 @@ leetcode solutions in typescript and rust
 
 | question id | question name                                  | lang       | time    | memory  | date      | remark                 |
 | ----------- | ---------------------------------------------- | ---------- | ------- | ------- | --------- | ---------------------- |
+| 781         | Rabbits in Forest                              | rust       | 100%    | 66.67%  | 2022.10.1 |                        |
 | 593         | Valid Square                                   | rust       | 100%    | 100%    | 2022.9.30 |                        |
 | 419         | Battleships in a Board                         | rust       | 75%     | 75%     | 2022.9.26 |                        |
 | 223         | Rectangle Area                                 | rust       | 100%    | 100%    | 2022.9.5  |                        |
