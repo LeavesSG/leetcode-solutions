@@ -7,6 +7,7 @@ mod q164_maximum_gap;
 mod q174_dungeon_game;
 mod q1812_determine_color_of_a_chessboard_square;
 mod q198_house_robber;
+mod q200_number_of_islands;
 mod q2024_maximize_the_confusion_of_an_exam;
 mod q204_count_primes;
 mod q223_rectangle_area;

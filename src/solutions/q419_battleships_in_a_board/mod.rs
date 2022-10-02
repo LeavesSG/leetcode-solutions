@@ -17,17 +17,6 @@ impl Solution {
         let n = board[0].len();
 
         fn get_siblings_2d(index: (usize, usize), size: (usize, usize)) -> Vec<(usize, usize)> {
-            // let validate = |i: i32, j: i32, m: usize, n: usize| {
-            //     i >= 0 && j >= 0 && i < m as i32 && j < n as i32
-            // };
-            // let i = index.0 as i32;
-            // let j = index.1 as i32;
-            // let (m, n) = size;
-            // [(i - 1, j), (i, j + 1), (i + 1, j), (i, j - 1)]
-            //     .into_iter()
-            //     .filter(|(i, j)| validate(*i, *j, m, n))
-            //     .map(|(i, j)| (i as usize, j as usize))
-            //     .collect()
             let (i, j) = index;
             let mut adj = vec![];
             if i > 0 {

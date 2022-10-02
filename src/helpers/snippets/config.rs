@@ -38,7 +38,7 @@ impl Config {
             "{{
               \"{}\": {{\n
               \"scope\": \"{}\",\n
-              \"prefix\": \"{}\",\n
+              \"prefix\": \"fn {}\",\n
               \"body\": {:?},\n
               \"description\": \"{}\",\n
             }},
