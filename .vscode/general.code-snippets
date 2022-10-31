@@ -1,0 +1,11 @@
+{
+  "general": {
+    "scope": "rust",
+
+    "prefix": "lc",
+
+    "body": ["use super::Solution;", "#[allow(dead_code)]"],
+
+    "description": ""
+  }
+}

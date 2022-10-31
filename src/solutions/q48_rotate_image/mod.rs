@@ -2,7 +2,7 @@
  * @lc app=leetcode id=48 lang=rust
  *
  * [48] Rotate Image
-&&& */
+ */
 use super::Solution;
 #[allow(dead_code)]
 // @lc code=start
