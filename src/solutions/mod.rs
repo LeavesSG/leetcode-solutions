@@ -21,6 +21,7 @@ mod q554_brick_wall;
 mod q593_valid_square;
 mod q62_unique_paths;
 mod q64_minimum_path_sum;
+mod q715_range_module;
 mod q73_set_matrix_zeroes;
 mod q781_rabbits_in_forest;
 mod q877_stone_game;
