@@ -61,19 +61,16 @@ impl Solution {
                 let mut queue = vec![start];
                 let mut checked = std::collections::HashMap::new();
                 while !queue.is_empty() {
-                    match queue.pop() {
-                        Some(item) => {
-                            checked.insert(item, true);
-                            get_adj(item)
-                                .into_iter()
-                                .for_each(|adj| match checked.get(&adj) {
-                                    None => {
-                                        queue.push(adj);
-                                    }
-                                    Some(_) => (),
-                                });
-                        }
-                        None => (),
+                    if let Some(item) = queue.pop() {
+                        checked.insert(item, true);
+                        get_adj(item)
+                            .into_iter()
+                            .for_each(|adj| match checked.get(&adj) {
+                                None => {
+                                    queue.push(adj);
+                                }
+                                Some(_) => (),
+                            });
                     }
                 }
                 checked.into_iter().map(|(key, _)| key).collect()

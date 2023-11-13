@@ -21,7 +21,6 @@ impl Solution {
                     .collect()
             })
             .collect();
-
         fn get_adj(i: usize, j: usize, result: &Vec<Vec<i32>>) -> Vec<(usize, usize)> {
             let row_max = &result.len();
             let col_max = &result[0].len();

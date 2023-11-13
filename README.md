@@ -1,4 +1,4 @@
-# leetcode-solutions
+# Leetcode solution
 
 leetcode solutions in typescript and rust
 
@@ -55,7 +55,7 @@ leetcode solutions in typescript and rust
 | 2           | Add Two Numbers                                | typescript | unknown | unknown | 2022.1.30  |
 | 1           | Two Sum                                        | javascript | unknown | unknown | 2021.8.9   |
 
-# generate code snippets
+## generate code snippets
 
 - code pieces in rust go here: `src/algs/`
 - run script in root dir: `cargo run --bin batch_convert`

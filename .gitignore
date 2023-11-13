@@ -1,2 +1,5 @@
 /target
 /.history
+
+# MacOS
+.DS_Store
