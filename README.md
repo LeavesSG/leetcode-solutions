@@ -4,6 +4,7 @@ leetcode solutions in typescript and rust
 
 | question id | question name                                  | lang       | time    | memory  | date       | remark                              |
 | ----------- | ---------------------------------------------- | ---------- | ------- | ------- | ---------- | ----------------------------------- |
+| 74          | Search in matrix                               | rust       | 69%     | 92%     | 2023.12.8  | 全程使用标准库方法摸鱼              |
 | 400         | Nth Digit                                      | rust       | 75%     | 100%    | 2022.10.31 |                                     |
 | 464         | Can I win                                      | rust       | 42.86%  | 57.14%  | 2022.10.30 | 使用[u8:_]代替 HashMap 省了 90%空间 |
 | 200         | Number of Islands                              | rust       | 5.34%   | 25.05%  | 2022.10.2  |                                     |
