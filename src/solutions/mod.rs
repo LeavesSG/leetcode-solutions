@@ -14,6 +14,7 @@ mod q223_rectangle_area;
 mod q319_bulb_switcher;
 mod q400_nth_digit;
 mod q419_battleships_in_a_board;
+mod q41_first_missing_positive;
 mod q464_can_i_win;
 mod q48_rotate_image;
 mod q4_median_of_two_sorted_arrays;
