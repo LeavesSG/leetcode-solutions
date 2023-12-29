@@ -4,6 +4,7 @@ leetcode solutions in typescript and rust
 
 | question id | question name                                  | lang       | time    | memory  | date       | remark                              |
 | ----------- | ---------------------------------------------- | ---------- | ------- | ------- | ---------- | ----------------------------------- |
+| 59          | Spiral Matrix II                               | rust       | 10%     | 30%     | 2023.12.29 |                                     |
 | 41          | Find First Positive                            | rust       | 69%     | 39%     | 2023.12.8  | 建议把允许参数 mutable 写进题干     |
 | 74          | Search In Matrix                               | rust       | 69%     | 92%     | 2023.12.8  | 全程使用标准库方法摸鱼              |
 | 400         | Nth Digit                                      | rust       | 75%     | 100%    | 2022.10.31 |                                     |

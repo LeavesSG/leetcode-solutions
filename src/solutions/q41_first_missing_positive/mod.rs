@@ -5,6 +5,7 @@
  */
 
 use super::Solution;
+#[allow(dead_code)]
 
 // @lc code=start
 
@@ -23,6 +24,7 @@ fn try_write(vec: &mut Vec<i32>, num: i32) -> () {
 }
 
 impl Solution {
+    #[allow(dead_code)]
     pub fn first_missing_positive(mut nums: Vec<i32>) -> i32 {
         let n = nums.len();
         for i in 0..n {

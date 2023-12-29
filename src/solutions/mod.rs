@@ -21,6 +21,7 @@ mod q4_median_of_two_sorted_arrays;
 mod q542_01_matrix;
 mod q554_brick_wall;
 mod q593_valid_square;
+mod q59_spiral_matrix_ii;
 mod q62_unique_paths;
 mod q64_minimum_path_sum;
 mod q715_range_module;
