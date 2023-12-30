@@ -1,3 +1,5 @@
+use std::fmt::format;
+
 /// # Example output
 ///
 /// ```json
@@ -34,17 +36,34 @@ impl Config {
     }
 
     pub fn into_snippets(self) -> String {
-        format!(
+        let headers = format!(
             "{{
-              \"{}\": {{\n
-              \"scope\": \"{}\",\n
-              \"prefix\": \"fn {}\",\n
-              \"body\": {:?},\n
-              \"description\": \"{}\",\n
-            }},
-        }}
-        ",
-            self.prefix, self.scope, self.prefix, self.body, self.description
+  \"{}\": {{
+    \"scope\": \"{}\",
+    \"prefix\": \"fn {}\",
+    \"body\":",
+            self.prefix, self.scope, self.prefix
+        );
+        let body = self.body.iter().fold(String::from(""), |a, c| {
+            return a + format!(
+                "
+      \"{}\",",
+                c
+            )
+            .as_str();
+        });
+        let footer = format!(
+            "\"description\": \"{}\"
+  }},
+}}",
+            self.description
+        );
+        format!(
+            "{}[
+{}
+    ],
+    {}",
+            headers, body, footer
         )
     }
 

@@ -1,5 +1,5 @@
 #[test]
 fn test() {
-    let res = Solution;
-    println!("{}", res);
+    // let res = Solution::;
+    // println!("{}", res);
 }

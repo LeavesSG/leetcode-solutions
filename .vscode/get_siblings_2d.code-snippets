@@ -1,14 +1,28 @@
 {
-              "get_siblings_2d": {
+  "get_siblings_2d": {
+    "scope": "rust",
+    "prefix": "fn get_siblings_2d",
+    "body":[
 
-              "scope": "rust",
-
-              "prefix": "fn get_siblings_2d",
-
-              "body": ["", "fn get_siblings_2d(index: (usize, usize), size: (usize, usize)) -> Vec<(usize, usize)> {", "    let (i, j) = index;", "    let mut adj = vec![];", "    if i > 0 {", "        adj.push((i - 1, j));", "    }", "    if i < size.0 - 1 {", "        adj.push((i + 1, j));", "    }", "    if j > 0 {", "        adj.push((i, j - 1));", "    }", "    if j < size.1 - 1 {", "        adj.push((i, j + 1));", "    }", "    adj", "}"],
-
-              "description": "",
-
-            },
-        }
-        
+      "",
+      "fn get_siblings_2d(index: (usize, usize), size: (usize, usize)) -> Vec<(usize, usize)> {",
+      "    let (i, j) = index;",
+      "    let mut adj = vec![];",
+      "    if i > 0 {",
+      "        adj.push((i - 1, j));",
+      "    }",
+      "    if i < size.0 - 1 {",
+      "        adj.push((i + 1, j));",
+      "    }",
+      "    if j > 0 {",
+      "        adj.push((i, j - 1));",
+      "    }",
+      "    if j < size.1 - 1 {",
+      "        adj.push((i, j + 1));",
+      "    }",
+      "    adj",
+      "}",
+    ],
+    "description": ""
+  },
+}

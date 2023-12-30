@@ -1,9 +1,6 @@
 /**
-
-A breadth first search implemented for graph indices with `Copy`
-
-*/
-
+ *  A breadth first search implemented for graph indices with `Copy`
+ */
 fn bfs_owned<T, P>(start: T, get_adj: &P) -> Vec<T>
 where
     T: Copy + Eq + std::hash::Hash,

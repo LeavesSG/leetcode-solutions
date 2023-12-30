@@ -1,14 +1,13 @@
 {
-              "test": {
+  "test": {
+    "scope": "rust",
+    "prefix": "fn test",
+    "body":[
 
-              "scope": "rust",
-
-              "prefix": "fn test",
-
-              "body": ["#[test]", "fn test() {", "    let res = Solution;", "    println!(\"{}\", res);", "}"],
-
-              "description": "",
-
-            },
-        }
-        
+      "#[test]",
+      "fn test() {",
+      "}",
+    ],
+    "description": ""
+  },
+}
