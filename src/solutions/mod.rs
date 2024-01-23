@@ -3,6 +3,7 @@ pub struct Solution {}
 mod q120_triangle;
 mod q122_best_time_to_buy_and_sell_stock_ii;
 mod q135_candy;
+mod q149_max_points_on_a_line;
 mod q164_maximum_gap;
 mod q174_dungeon_game;
 mod q1812_determine_color_of_a_chessboard_square;
