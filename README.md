@@ -4,7 +4,8 @@ leetcode solutions in typescript and rust
 
 | question id | question name                                  | lang       | time    | memory  | date       | remark                              |
 | ----------- | ---------------------------------------------- | ---------- | ------- | ------- | ---------- | ----------------------------------- |
-| 84          | Largest Rectangle in Histogram                 | rust       | 5%      | 90%     | 2023.12.29 | 5%也算过                            |
+| 149         | Max Points on a Line                           | rust       | 10%     | 10%     | 2024.01.24 | 10%过了算过                         |
+| 84          | Largest Rectangle in Histogram                 | rust       | 5%      | 90%     | 2023.12.29 | 5%过了也算过                        |
 | 59          | Spiral Matrix II                               | rust       | 10%     | 30%     | 2023.12.29 |                                     |
 | 41          | Find First Positive                            | rust       | 69%     | 39%     | 2023.12.8  | 建议把允许参数 mutable 写进题干     |
 | 74          | Search In Matrix                               | rust       | 69%     | 92%     | 2023.12.8  | 全程使用标准库方法摸鱼              |
