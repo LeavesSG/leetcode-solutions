@@ -5,59 +5,46 @@
  */
 use super::Solution;
 // @lc code=start
-use std::collections::HashMap;
+
 #[allow(dead_code)]
 impl Solution {
     pub fn calculate_minimum_hp(dungeon: Vec<Vec<i32>>) -> i32 {
         let m = dungeon.len();
-        let n = dungeon[0].len();
-        fn recursion(
-            i: usize,
-            j: usize,
-            m: usize,
-            n: usize,
-            hp: i32,
-            dungeon: &Vec<Vec<i32>>,
-            map: &mut HashMap<(usize, usize), i32>,
-        ) -> i32 {
-            let min;
-            let curr = dungeon[m - i][n - j];
-            let before = (hp - curr).max(1);
-            let find = map.get(&(m - i, n - j));
-            println!("i:{},j:{},hp:{},curr:{},before:{}", i, j, hp, curr, before);
-            match find {
-                Some(v) => return *v,
-                _ => match (i, j) {
-                    (0, 0) => {
-                        min = before;
+        let n = dungeon.first().unwrap().len();
+        let mut min_health_at = std::collections::HashMap::new();
+
+        min_health_at.insert((m - 1, n - 1), 1);
+        let mut q = std::collections::VecDeque::from(vec![(m - 1, n - 1)]);
+        while let Some((r, c)) = q.pop_front() {
+            let room = dungeon[r][c];
+            let prerequisite = min_health_at.get(&(r, c)).unwrap();
+            let required = std::cmp::max(1, prerequisite - room);
+
+            [(r.checked_sub(1), Some(c)), (Some(r), c.checked_sub(1))]
+                .into_iter()
+                .for_each(|(r, c)| {
+                    if let (Some(r), Some(c)) = (r, c) {
+                        if let Some(req) = min_health_at.get(&(r, c)) {
+                            if required < *req {
+                                min_health_at.insert((r, c), std::cmp::min(*req, required));
+                                q.push_back((r, c));
+                            }
+                        } else {
+                            min_health_at.insert((r, c), required);
+                            q.push_back((r, c));
+                        }
                     }
-                    (i, 0) => {
-                        min = recursion(i - 1, j, m, n, before, dungeon, map);
-                    }
-                    (0, j) => {
-                        min = recursion(i, j - 1, m, n, before, dungeon, map);
-                    }
-                    _ => {
-                        let left = recursion(i - 1, j, m, n, before, dungeon, map);
-                        let right = recursion(i, j - 1, m, n, before, dungeon, map);
-                        min = left.min(right);
-                    }
-                },
-            }
-            map.insert((m - 1, n - 1), min);
-            min
+                });
         }
-        let mut map: HashMap<(usize, usize), i32> = HashMap::new();
-        let result = recursion(0, 0, m - 1, n - 1, 1, &dungeon, &mut map);
-        println!("{:?}", map);
-        result
+        std::cmp::max(1, min_health_at.get(&(0, 0)).unwrap() - dungeon[0][0])
     }
 }
 // @lc code=end
 
 #[test]
 fn test() {
-    let dungeun = vec![vec![0, -5], vec![0, 0]];
-    let result = Solution::calculate_minimum_hp(dungeun);
+    use crate::vecnd;
+    let dungeon = vecnd![[-2, -3, 3], [-5, -10, 1], [10, 30, -5]];
+    let result = Solution::calculate_minimum_hp(dungeon);
     println!("{}", result);
 }
